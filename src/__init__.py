@@ -1,14 +1,15 @@
-"""
-Parametric Shape Prior for Beam Form-Finding (PyTorch)
-"""
+"""Parametric Shape Prior for Beam Form-Finding (PyTorch)"""
 
-from .parametric_curve import ParametricCurve
-from .beam_energy import bending_energy, external_work
+from .curves import Curve, BezierCurve, DiscreteCurve, CurvatureResult
+from .beam_energy import compute_beam_energy
+from .optimizers import DirectOptimizer, BezierOptimizer, OptimizationResult
+from .comparison_plots import plot_curvature_comparison, plot_shape_comparison, plot_energy_convergence
 from .visualization import plot_results
 
 __all__ = [
-    "ParametricCurve",
-    "bending_energy",
-    "external_work",
+    "Curve", "BezierCurve", "DiscreteCurve", "CurvatureResult",
+    "compute_beam_energy",
+    "DirectOptimizer", "BezierOptimizer", "OptimizationResult",
+    "plot_curvature_comparison", "plot_shape_comparison", "plot_energy_convergence",
     "plot_results",
 ]
